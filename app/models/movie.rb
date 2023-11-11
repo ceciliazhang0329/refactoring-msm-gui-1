@@ -11,6 +11,12 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  director_id :integer
-#
+
+
 class Movie < ApplicationRecord
+  def director
+    the_director = Director.where(id: self.director_id).at(0)
+    return the_director
+  end
+
 end

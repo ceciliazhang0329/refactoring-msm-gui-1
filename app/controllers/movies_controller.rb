@@ -55,5 +55,5 @@ class MoviesController < ApplicationController
     @the_movie.destroy
 
     redirect_to("/movies", { :notice => "Movie deleted successfully."} )
-  end
+  end  
 end
